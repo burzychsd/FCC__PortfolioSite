@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio Site</title>
+	<link href="https://fonts.googleapis.com/css?family=Muli|Work+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="./public/main.css">
+</head>
+<body>
+	<header class="header">
+		<nav id="navbar">
+			<ul>
+				<li><a href="#welcome-section">About</a></li>
+				<li><a href="#projects">Work</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="welcome-section">
+		<h1>First, solve the problem. Then, write the code</h1>
+		<p><strong>~ John Johnson</strong></p>
+		</section>
+		<section id="projects">
+			<h1>My FCC Projects</h1>
+			<hr style="width: 80%; max-width: 400px; background: #E7DFC6">
+			<div id="grid">
+				<div class="grid-item">
+					<h2 class="project-tile">FCC Project 1</h2>
+					<a target="_blank" href="https://burzychsd.github.io/FCC__TributePage/"><img src="./public/images/project1.svg" alt="project1"></a>
+				</div>
+				<div class="grid-item">
+					<h2 class="project-tile">FCC Project 2</h2>
+					<a target="_blank" href="https://burzychsd.github.io/FCC__SurveyForm/"><img src="./public/images/project2.svg" alt="project2"></a>
+				</div>
+				<div class="grid-item">
+					<h2 class="project-tile">FCC Project 3</h2>
+					<a target="_blank" href="https://burzychsd.github.io/FCC__LandingPage/index.html"><img src="./public/images/project3.svg" alt="project3"></a>
+				</div>
+				<div class="grid-item">
+					<h2 class="project-tile">FCC Project 4</h2>
+					<a target="_blank" href="https://burzychsd.github.io/FCC__DocumentationPage/"><img src="./public/images/project4.svg" alt="project4"></a>
+				</div>
+			</div>
+		</section>
+		<section id="contact">
+			<h1>Contact Me</h1>
+			<hr style="width: 80%; max-width: 400px; background: #E7DFC6">
+			<div id="grid2">
+				<div class="grid-item">
+					<a id="profile-link" href="https://github.com/burzychsd" target="_blank"><img src="./public/icons/github.svg" alt="github"></a>
+				</div>
+				<div class="grid-item">
+					<a href="#" target="_blank"><img src="./public/icons/facebook.svg" alt="facebook"></a>
+				</div>
+				<div class="grid-item">
+					<a href="#" target="_blank"><img src="./public/icons/linkedin.svg" alt="linkedin"></a>
+				</div>
+				<div class="grid-item">
+					<a href="#" target="_blank"><img src="./public/icons/twitter.svg" alt="twitter"></a>
+				</div>
+			</div>
+		</section>
+	</main>	
+	<footer id="footer">
+		<p id="footer-text" style="color: #ffffff">**This is just a fake portfolio for FCC. I'm gonna make a better one next time ;)</p>
+	</footer>
+</body>
+<script>
+	let initialScrollPosition = 0;
+	const header = document.querySelector('.header');
+
+	window.addEventListener('scroll', function(e) {
+		initialScrollPosition = window.scrollY;
+
+		initialScrollPosition > 0 ? header.classList.add('header-background') : header.classList.remove('header-background')
+	});
+</script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
